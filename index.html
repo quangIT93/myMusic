@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <a href="#">My Music</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#content-music">Bài hát</a></li>
+          <li><a href="#content">Ca sĩ</a></li>
+          <li><a href="#">BXH</a></li>
+        </ul>
+      </nav>
+      <div class="search-btn">
+        <input type="text" class="search-text" placeholder="Search..." />
+        <a href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      </div>
+    </header>
+    <main id="content">
+      <section class="slider">
+        <i class="fa fa-angle-left slider-prev" onclick=""></i>
+        <div class="slider-wrapper">
+          <div class="slider-main"></div>
+        </div>
+        <i class="fa fa-angle-right slider-next"></i>
+      </section>
+      <article class="content-music" id="content-music">
+        <div class="player">
+          <div class="dashboard">
+            <div class="title">
+              <h4>Now Playing</h4>
+              <h2>String 5th & 9th</h2>
+            </div>
+            <div class="cd">
+              <div class="cd-image"></div>
+            </div>
+            <div class="control">
+              <div class="btn btn-repeat">
+                <i class="fa-solid fa-repeat"></i>
+              </div>
+              <div class="btn btn-prev">
+                <i class="fa-solid fa-backward"></i>
+              </div>
+              <div class="btn btn-toggle-play">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="btn btn-next">
+                <i class="fa-solid fa-forward"></i>
+              </div>
+              <div class="btn btn-random">
+                <i class="fa-solid fa-shuffle"></i>
+              </div>
+            </div>
+            <input
+              type="range"
+              id="process"
+              class="process"
+              value="0"
+              step="1"
+              min="0"
+              max="100"
+            />
+            <audio id="audio" type="audio/mpeg" src=""></audio>
+          </div>
+          <div class="playList">
+          </div>
+          <div class="checked" style="display: none;">
+            <div class="checkedItem">
+              <div class="cancleCheck">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <h3>Bạn chắc chắn muốn xoá nó?</h3>
+              <div class="btnChecked">
+                <div class="checkedTrue">YES</div>
+                <div class="checkedFalse">NO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="general">
+          <div class="newPost">
+            <h1>Mới phát hành</h1>
+            <div class="general-select">
+              <div class="general-select__item select">
+                <p class="select-song active">Bài Hát</p>
+                <p class="select-album">Album</p>
+                <p class="select-deleted">Nhạc đã xoá</p>
+              </div>
+              <div class="general-select__all select">
+                <p class="select-all">
+                  All
+                  <i class="fa fa-angle-right slider-next"></i>
+                </p>
+              </div>
+            </div>
+            <div class="general-items"></div>
+          </div>
+          <div class="checkedPost">
+            <div class="checkedItem">
+              <div class="cancleCheck">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <h3>Bạn có muốn lưu nó vào list nhạc đang phát không?</h3>
+              <div class="btnChecked">
+                <div class="checkedTrue">YES</div>
+                <div class="checkedFalse">NO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer id="footer">
+      <div class="footer-navigation">
+        <div class="footer-info__title info">
+          <h3>Tham khảo</h3>
+          <ul>
+            <li>F8.edu.vn</li>
+            <li>Youtube.com</li>
+            <li>Nodemy</li>
+            <li>Evondev</li>
+          </ul>
+        </div>
+
+        <div class="footer-info__title product">
+          <h3>My Other Project </h3>
+          <ul>
+            <li>Project Code basic Html css js</li>
+            <li>Project code nodejs react</li>
+            <li>project PHP</li>
+          </ul>
+        </div>
+
+        <div class="footer-info__title link">
+          <h3>Connect with us</h3>
+          <ul>
+            <li><i class="fa-brands fa-square-facebook"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+            <li><i class="fa-brands fa-square-instagram"></i></li>
+            <li><i class="fa-solid fa-envelope"></i></li>
+          </ul>
+          <h3 style="color: red">Chúc các bạn nghe nhạc vui vẻ</h3>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/js/slider.js"></script>
+    <script src="./src/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/39446b5f90.js" crossorigin="anonymous"></script>
+  </body>
+</html>

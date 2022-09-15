@@ -1,0 +1,31 @@
+// Design STrateges
+function km1(price) {
+    return price = 100;
+}
+
+function km2(price) {
+    return price = 100;
+}
+
+function day8_3(price) {
+    return price = 100;
+}
+
+function day20_11(price) {
+    return price = 100;
+}
+
+const getPriceSTrateges = {
+    km11: km1,
+    km2,
+    day8_3,
+    day20_11
+}
+
+function getPrice(type, price) {
+    return getPriceSTrateges[type](price)
+}
+
+console.log(getPriceSTrateges.km11)
+
+console.log('gia',getPrice('km11',200))
