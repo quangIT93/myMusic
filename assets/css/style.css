@@ -105,6 +105,7 @@ main {
     padding-top: 12px; }
     main .slider .slider-next,
     main .slider .slider-prev {
+      transition: 0.3s linear;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -116,14 +117,20 @@ main {
       align-items: center;
       color: #999;
       background-color: white;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       cursor: pointer;
       font-size: 20px;
       z-index: 10; }
+      main .slider .slider-next:hover,
+      main .slider .slider-prev:hover {
+        background-color: red;
+        color: #fff;
+        box-shadow: none; }
     main .slider .slider-next {
-      right: -25px; }
+      right: -25px;
+      box-shadow: 10px 10px 20px #1d1347; }
     main .slider .slider-prev {
-      left: -25px; }
+      left: -25px;
+      box-shadow: -10px 10px 20px #1d1347; }
     main .slider .slider-wrapper {
       width: 100%;
       height: 100%;
@@ -334,11 +341,12 @@ main {
     main .content-music .general {
       flex: 3;
       margin: 0 12px;
-      background-color: #ccc;
+      background-color: #1d1347;
       padding: 12px;
-      position: relative; }
+      position: relative;
+      color: #fff; }
       main .content-music .general .newPost {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #fff;
         padding-bottom: 20px; }
         main .content-music .general .newPost h1 {
           padding-top: 12px;
