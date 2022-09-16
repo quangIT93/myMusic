@@ -282,37 +282,51 @@ const app = {
     };
 
     repeatBtn.onclick = function () {
-      console.log('nhan nut repeat')
-      switch (_this.isRepeat) {
-        case 0:
-          console.log(_this.isRepeat)
-          _this.isRepeat = 1;
+      if(_this.isRepeat == 0){
+        _this.isRepeat = 1;
           _this.setConfig("isRepeat", _this.isRepeat);
-
           repeatBtn.classList.add("active");
           repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>1';
-          break;
-        case 1:
-          console.log(_this.isRepeat)
-
-          _this.isRepeat = -1;
+      }else if(_this.isRepeat == 1){
+        _this.isRepeat = -1;
           _this.setConfig("isRepeat", _this.isRepeat);
-
           repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>';
           repeatBtn.classList.add("active");
-          break;
-        case -1:
-          console.log(_this.isRepeat)
-          _this.isRepeat = 0;
+      }else if(_this.isRepeat == -1) {
+        _this.isRepeat = 0;
           _this.setConfig("isRepeat", _this.isRepeat);
-
           repeatBtn.classList.remove("active");
-
-          break;
-        default:
-          console.log('loi')
-          break;
       }
+      // switch (_this.isRepeat) {
+      //   case 0:
+      //     console.log(_this.isRepeat)
+      //     _this.isRepeat = 1;
+      //     _this.setConfig("isRepeat", _this.isRepeat);
+
+      //     repeatBtn.classList.add("active");
+      //     repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>1';
+      //     break;
+      //   case 1:
+      //     console.log(_this.isRepeat)
+
+      //     _this.isRepeat = -1;
+      //     _this.setConfig("isRepeat", _this.isRepeat);
+
+      //     repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>';
+      //     repeatBtn.classList.add("active");
+      //     break;
+      //   case -1:
+      //     console.log(_this.isRepeat)
+      //     _this.isRepeat = 0;
+      //     _this.setConfig("isRepeat", _this.isRepeat);
+
+      //     repeatBtn.classList.remove("active");
+
+      //     break;
+      //   default:
+      //     console.log('loi')
+      //     break;
+      // }
     };
 
     let arrayFilter = [];
