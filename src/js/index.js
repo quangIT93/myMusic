@@ -12,7 +12,7 @@ const nextBtn = $(".btn-next");
 const preBtn = $(".btn-prev");
 const song = $(".song");
 const randomBtn = $(".btn-random");
-const repeatBtn = $(".btn-repeat");
+const repeatBtn = $(".control .btn-repeat");
 const playList = $(".playList");
 const sliderMain = $(".slider-main");
 
@@ -275,7 +275,6 @@ const app = {
     };
 
     randomBtn.onclick = function () {
-      console.log(_this.isRepeat)
 
       _this.isRandom = !_this.isRandom;
       _this.setConfig("isRandom", _this.isRandom);
@@ -283,6 +282,7 @@ const app = {
     };
 
     repeatBtn.onclick = function () {
+      console.log('nhan nut repeat')
       switch (_this.isRepeat) {
         case 0:
           console.log(_this.isRepeat)
@@ -310,6 +310,7 @@ const app = {
 
           break;
         default:
+          console.log('loi')
           break;
       }
     };
