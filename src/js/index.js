@@ -283,21 +283,21 @@ const app = {
     repeatBtn.onclick = function () {
       switch (_this.isRepeat) {
         case 0:
-          _this.isRepeat = 1;
+          _this.isRepeat = Number(1);
           _this.setConfig("isRepeat", _this.isRepeat);
 
           repeatBtn.classList.add("active");
           repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>1';
           break;
         case 1:
-          _this.isRepeat = -1;
+          _this.isRepeat = Number(-1);
           _this.setConfig("isRepeat", _this.isRepeat);
 
           repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>';
           repeatBtn.classList.add("active");
           break;
         case -1:
-          _this.isRepeat = 0;
+          _this.isRepeat = Number(0);
           _this.setConfig("isRepeat", _this.isRepeat);
 
           repeatBtn.classList.remove("active");
