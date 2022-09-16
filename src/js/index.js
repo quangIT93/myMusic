@@ -149,9 +149,7 @@ const app = {
             <div class="song ${
               index === this.currentIndex ? "active" : ""
             }" data-index = "${index}">
-                <div class="song-image" style="background-image: url('${
-                  song.image
-                }')"></div>
+                <div class="song-image" style="background-image: url(${song.image})"></div>
                 <div class="body">
                     <h3 class="title">${song.name}</h3>
                     <p>${song.singer}</p>
@@ -179,7 +177,7 @@ const app = {
     const htmlsSider = this.songs.map((song, index) => {
       return `
             <div class="slider-item">
-             <img src="${song.image}" alt="" />
+             <img src=${song.image} alt="" />
             </div>
       `;
     });
