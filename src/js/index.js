@@ -282,6 +282,7 @@ const app = {
     };
 
     repeatBtn.onclick = function () {
+      console.log(_this.isRepeat)
       if(_this.isRepeat == 0){
         _this.isRepeat = 1;
           _this.setConfig("isRepeat", _this.isRepeat);
@@ -424,12 +425,10 @@ const app = {
     audio.src = this.currentSong.path;
   },
   loadConfig: function () {
-    this.isRandom == undefined
+    this.isRepeat = 0;
+    this.isRandom === undefined
       ? (this.isRandom = false)
       : (this.isRandom = this.config.isRandom);
-    this.isRepeat == undefined
-      ? (this.isRepeat = 0)
-      : (this.isRepeat = this.config.isRepeat);
   },
   nextSong: function () {
     playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
@@ -445,6 +444,7 @@ const app = {
     if (this.currentIndex < 0) {
       this.currentIndex = this.songs.length - 1;
     }
+    // this.currentIndex < 0 ? this.currentIndex = this.songs.length - 1 : this.currentIndex
     this.loadCurrentSong();
   },
   nextRandom: function () {
