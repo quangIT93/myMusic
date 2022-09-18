@@ -7,40 +7,71 @@ window.addEventListener("load", function () {
   let sliderWrapper = document.querySelector(".slider-wrapper");
   let dotItems = document.querySelectorAll(".slider-dots");
 
+  let navBars = document.querySelector("header .nav-bars");
+  let ulNavBars = document.querySelector("header .nav-bars ul");
+  let bars = document.querySelector("header .bars");
+
+
+  const liNav = $("header nav ul");
   let positionImg = 0;
-
   //lấy chiều rộng của phần tử chứa ảnh
-  const widthSlider = sliderItems[0].offsetWidth;
 
-  //   sliderMain.style.width = `${2000}px`;
+  bars.addEventListener('click', function (e) {
+    navBars.classList.toggle(`active`)
+    console.log(liNav)
+    
+  })
+  
+  navBars.addEventListener('click', function (e) {
+    navBars.classList.remove(`active`)
+  })
+  let linav;
+  liNav.addEventListener('click', function (e) {
+      e.target.closest('li').classList.add('active')
+    if(linav !== undefined){
+      linav.classList.remove('active')
+    }
+
+    linav = e.target.closest('li')
+  })
+
+
+
+
   btnNext.addEventListener("click", function () {
-    handleClickSlider(1);
+    const widthSlider = sliderItems[0].offsetWidth;
+    handleSlider(1, widthSlider);
   });
   btnPrev.addEventListener("click", function () {
-    handleClickSlider(0);
+    const widthSlider = sliderItems[0].offsetWidth;
+
+    handleSlider(0, widthSlider);
   });
   setInterval(function () {
-    handleClickSlider(1);
+    const widthSlider = sliderItems[0].offsetWidth;
+    handleSlider(1, widthSlider);
   }, 5000);
 
-  function handleClickSlider(checked) {
+  function handleSlider(checked, widthSlider) {
     if (checked == 1) {
-      positionImg = positionImg - 1000;
-      if (positionImg < -1000 * (sliderMain.children.length - 1)) {
+      positionImg = positionImg - widthSlider;
+      if (positionImg < -widthSlider * (sliderMain.children.length - 1)) {
         sliderMain.style.left = `0`;
         positionImg = 0;
       } else if (
         positionImg <= 0 &&
-        positionImg >= -1000 * (sliderMain.children.length - 1)
+        positionImg >= -widthSlider * (sliderMain.children.length - 1)
       ) {
         sliderMain.style.left = `${positionImg}px`;
         // sliderMain.style = `transform: translateX(${positionImg}px);`;
       }
     } else if (checked == 0) {
-      positionImg = positionImg + 1000;
+      positionImg = positionImg + widthSlider;
       if (positionImg > 0) {
-        sliderMain.style.left = `${(sliderMain.children.length - 1) * -1000}px`;
-        positionImg = (sliderMain.children.length - 1) * -1000;
+        sliderMain.style.left = `${
+          (sliderMain.children.length - 1) * -widthSlider
+        }px`;
+        positionImg = (sliderMain.children.length - 1) * -widthSlider;
       } else if (positionImg <= 0) {
         sliderMain.style.left = `${positionImg}px`;
       }

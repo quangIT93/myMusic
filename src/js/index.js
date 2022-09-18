@@ -24,6 +24,9 @@ const selectAlbum = $(".select-album");
 const selectAll = $(".select-all");
 const generalItems = $(".general-items");
 const selectDeleted = $(".select-deleted");
+
+
+
 const app = {
   isplaying: false,
   currentIndex: 0,
@@ -456,7 +459,6 @@ const app = {
       this.loadCurrentSong();
     }
   },
-
   // phần content bên phải
 
   handleEventsSelectList: function () {
