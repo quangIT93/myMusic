@@ -565,31 +565,6 @@ main {
               width: 3.75rem;
               height: 2rem;
               cursor: pointer; }
-    @media (max-width: 739px) {
-      main .content-music {
-        flex-direction: column;
-        justify-content: center; }
-        main .content-music .player {
-          align-self: center;
-          margin-bottom: 12px; }
-          main .content-music .player .playList .song .body h3 {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 190px; }
-          main .content-music .player .playList .song .option {
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center; }
-        main .content-music .general {
-          max-width: 700px; }
-          main .content-music .general .newPost .general-select .select {
-            font-size: 12px; }
-          main .content-music .general .newPost .general-items {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column; } }
     @media (min-width: 740px) and (max-width: 1023px) {
       main .content-music {
         flex-direction: column;
@@ -711,6 +686,32 @@ main {
                   text-align: start; }
                 main .content-music .general .newPost .general-items .item .item-detail p {
                   font-size: 12px; } }
+    @media (max-width: 739px) {
+      main .content-music {
+        flex-direction: column;
+        justify-content: center; }
+        main .content-music .player {
+          align-self: center;
+          margin-bottom: 12px; }
+          main .content-music .player .playList .song .body h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 190px; }
+          main .content-music .player .playList .song .option {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+        main .content-music .general {
+          max-width: 700px; }
+          main .content-music .general .newPost .general-select .select {
+            font-size: 12px; }
+          main .content-music .general .newPost .general-items .item {
+            width: auto;
+            margin: 0; }
+            main .content-music .general .newPost .general-items .item .item-detail h4 {
+              width: 100px; } }
 
 #footer .footer-navigation {
   display: flex;
