@@ -281,6 +281,7 @@ const app = {
 
       _this.isRandom = !_this.isRandom;
       _this.setConfig("isRandom", _this.isRandom);
+      randomBtn.innerHTML = '<i class="fa-solid fa-shuffle"></i>';
       randomBtn.classList.toggle("active", _this.isRandom);
     };
 
@@ -299,6 +300,7 @@ const app = {
       }else if(_this.isRepeat == -1) {
         _this.isRepeat = 0;
           _this.setConfig("isRepeat", _this.isRepeat);
+          repeatBtn.innerHTML = '<i class="fa-solid fa-repeat"></i>';
           repeatBtn.classList.remove("active");
       }
       // switch (_this.isRepeat) {

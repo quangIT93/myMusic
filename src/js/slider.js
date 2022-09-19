@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
   let dotItems = document.querySelectorAll(".slider-dots");
 
   let navBars = document.querySelector("header .nav-bars");
-  let ulNavBars = document.querySelector("header .nav-bars ul");
+  let ulNavBars = document.querySelectorAll("header .nav-bars ul li");
   let bars = document.querySelector("header .bars");
 
 
@@ -23,8 +23,11 @@ window.addEventListener("load", function () {
   })
   
   navBars.addEventListener('click', function (e) {
-    navBars.classList.remove(`active`)
+    console.log(e.target.closest('li'))
+    if(e.target.closest('li'))
+      navBars.classList.remove(`active`)
   })
+
   let linav;
   liNav.addEventListener('click', function (e) {
       e.target.closest('li').classList.add('active')

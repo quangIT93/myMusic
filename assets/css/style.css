@@ -50,7 +50,8 @@ header {
   background-color: #3867e7;
   display: flex;
   justify-content: space-between;
-  z-index: 100; }
+  z-index: 100;
+  transition: 0.3s linear; }
   header .logo {
     display: flex;
     background-color: red;
@@ -126,12 +127,13 @@ header {
     top: 46px;
     background-color: #ccc;
     width: 100%;
-    min-height: 100vh; }
+    min-height: 100vh;
+    transition: 0.3s linear;
+    opacity: 0; }
     header .nav-bars ul li {
       text-align: center;
       border-bottom: 1px solid #000; }
       header .nav-bars ul li a {
-        padding: 20px 12px;
         font-size: 20px;
         font-weight: 600;
         color: #000;
@@ -145,7 +147,10 @@ header {
     header .nav-bars ul li:last-child {
       border: none; }
   header .nav-bars.active {
-    transform: translateX(0%); }
+    transform: translateX(0%);
+    background-color: rgba(20, 65, 188, 0.6);
+    opacity: 1;
+    transition: 0.3s linear; }
   @media (max-width: 739px) {
     header nav {
       display: none; }
@@ -727,6 +732,8 @@ main {
       #footer .footer-navigation .footer-info__title ul li {
         transition: 0.5s linear;
         padding: 12px; }
+        #footer .footer-navigation .footer-info__title ul li a {
+          color: #000; }
   #footer .footer-navigation .info, #footer .footer-navigation .product {
     flex: 1;
     border-right: 1px solid black; }
