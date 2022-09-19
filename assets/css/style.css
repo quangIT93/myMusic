@@ -128,7 +128,7 @@ header {
     background-color: #ccc;
     width: 100%;
     min-height: 100vh;
-    transition: 0.3s linear;
+    transition: 0.5s linear;
     opacity: 0; }
     header .nav-bars ul li {
       text-align: center;
@@ -136,9 +136,9 @@ header {
       header .nav-bars ul li a {
         font-size: 20px;
         font-weight: 600;
-        color: #000;
+        color: #01154b;
         line-height: 68px;
-        background-color: #ccc;
+        background-color: #878de3;
         display: flow-root;
         transition: 0.3s linear; }
         header .nav-bars ul li a:hover {
@@ -176,7 +176,8 @@ main {
     margin: 1.5625rem auto;
     position: relative;
     padding-top: 0.75rem; }
-    main .slider .prev, main .slider .next {
+    main .slider .prev,
+    main .slider .next {
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
@@ -190,14 +191,17 @@ main {
       transition: 0.3s linear;
       background-color: white; }
       main .slider .prev .slider-next,
-      main .slider .prev .slider-prev, main .slider .next .slider-next,
+      main .slider .prev .slider-prev,
+      main .slider .next .slider-next,
       main .slider .next .slider-prev {
         color: #999;
         cursor: pointer;
         font-size: 1.25rem; }
-      main .slider .prev:hover, main .slider .next:hover {
+      main .slider .prev:hover,
+      main .slider .next:hover {
         background-color: red; }
-        main .slider .prev:hover i, main .slider .next:hover i {
+        main .slider .prev:hover i,
+        main .slider .next:hover i {
           color: #fff; }
     main .slider .next {
       right: -1.5625rem;
