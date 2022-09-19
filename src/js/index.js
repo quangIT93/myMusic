@@ -268,11 +268,13 @@ const app = {
     };
 
     nextBtn.onclick = function () {
+      nextBtn.innerHTML = '<i class="fa-solid fa-forward"></i>'
       _this.nextSong();
       audio.play();
     };
 
-    preBtn.onclick = function () {
+    preBtn.onclick = function (e) {
+      preBtn.innerHTML = '<i class="fa-solid fa-backward"></i>'
       _this.preSong();
       audio.play();
     };

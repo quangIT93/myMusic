@@ -1,14 +1,10 @@
 window.addEventListener("load", function () {
-  let slider = document.querySelector(".slider");
   let sliderMain = document.querySelector(".slider-main");
   let sliderItems = document.querySelectorAll(".slider-item");
-  let btnNext = document.querySelector(".slider-next");
-  let btnPrev = document.querySelector(".slider-prev");
-  let sliderWrapper = document.querySelector(".slider-wrapper");
-  let dotItems = document.querySelectorAll(".slider-dots");
+  let btnNext = document.querySelector(".next");
+  let btnPrev = document.querySelector(".prev");
 
   let navBars = document.querySelector("header .nav-bars");
-  let ulNavBars = document.querySelectorAll("header .nav-bars ul li");
   let bars = document.querySelector("header .bars");
 
 
@@ -34,7 +30,6 @@ window.addEventListener("load", function () {
     if(linav !== undefined){
       linav.classList.remove('active')
     }
-
     linav = e.target.closest('li')
   })
 
@@ -42,10 +37,14 @@ window.addEventListener("load", function () {
 
 
   btnNext.addEventListener("click", function () {
+    btnNext.innerHTML = '<i class="fa fa-angle-right slider-next"></i>'
+    
     const widthSlider = sliderItems[0].offsetWidth;
     handleSlider(1, widthSlider);
   });
   btnPrev.addEventListener("click", function () {
+    btnPrev.innerHTML = '<i class="fa fa-angle-left slider-prev"></i>'
+
     const widthSlider = sliderItems[0].offsetWidth;
 
     handleSlider(0, widthSlider);
